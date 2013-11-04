@@ -1,7 +1,6 @@
 (ns marginalia.browser
   (:require
    [clojure.java.io :as io]
-   ;[clojure.tools.namespace.find :as find]
    [clojure.tools.namespace :as ns :refer [read-ns-decl read-file-ns-decl]]
    [compojure.core :refer [defroutes GET]]
    [compojure.handler :as handler]
@@ -45,7 +44,7 @@
              deps nil
              multi nil
              marg-opts nil
-             sources (distinct (marg/format-sources nil))
+             sources (distinct (marg/format-sources ["./src" "./test"]))
              project-clj (when (.exists (io/file "project.clj"))
                            (marg/parse-project-file))
              choose #(or %1 %2)
