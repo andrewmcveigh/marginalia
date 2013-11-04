@@ -11,3 +11,6 @@ webgen.cache
 .lein-deps-sum
 docs/*.html
 target
+.lein-repl-history
+.nrepl-port
+vendor/mathjax/

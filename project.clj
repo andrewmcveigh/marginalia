@@ -6,10 +6,14 @@
    [org.clojure/tools.namespace "0.1.1"]
    [org.clojure/tools.cli "0.2.1"]
    [org.markdownj/markdownj "0.3.0-1.0.2b4"]
-   [de.ubercode.clostache/clostache "1.3.1"]]
+   [de.ubercode.clostache/clostache "1.3.1"]
+   [compojure "1.1.6"]
+   [hiccup "1.0.4"]]
 
   :resource-paths ["vendor"]
 
   ;;Needed for testing Latex equation formatting. You must download
   ;;and install MathJax in you doc directory.
-  :marginalia {:javascript ["mathjax/MathJax.js"]})
+  :marginalia {:javascript ["mathjax/MathJax.js"]}
+
+  :ring {:handler marginalia.browser/app})
