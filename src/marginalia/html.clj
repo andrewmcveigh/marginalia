@@ -379,7 +379,7 @@
       "Syntax highlighting provided by Alex Gorbatchev's "
       [:a {:href "http://alexgorbatchev.com/SyntaxHighlighter/"}
        "SyntaxHighlighter"]
-      floating-toc-html]
+      (floating-toc-html content)]
      (inline-js (str *resources* "app.js"))]]))
 
 
